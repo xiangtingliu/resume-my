@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘相婷 | 文化产业管理个人简历</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 50%, #e0c3fc 100%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            padding: 60px 20px;
+            position: relative;
+            overflow-x: hidden; 
+        }
+
+        /* 背景装饰光斑 */
+        .bg-blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; }
+        .blob-1 { width: 300px; height: 300px; background: #ff9a9e; top: 10%; left: 10%; }
+        .blob-2 { width: 250px; height: 250px; background: #a1c4fd; bottom: 10%; right: 10%; }
+        .blob-3 { width: 200px; height: 200px; background: #fad0c4; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+        /* 核心玻璃拟态容器 */
+        .glass-card {
+            width: 100%; max-width: 900px;
+            background: rgba(255, 255, 255, 0.4); 
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border-radius: 24px; padding: 50px; color: #333;
+            position: relative; z-index: 1; margin-bottom: 50px;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #2c3e50; }
+        .subtitle { font-size: 1.1rem; color: #555; margin-bottom: 30px; }
+        .section-title { 
+            font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; 
+            margin: 40px 0 20px; color: #666; 
+            border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 8px; 
+        }
+        p { line-height: 1.8; margin-bottom: 15px; color: #444; }
+
+        /* 标签样式 */
+        .tags { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .tag {
+            padding: 6px 15px; border-radius: 50px; font-size: 0.85rem;
+            background: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.8);
+            color: #555;
+        }
+
+        /* 核心课程标签 */
+        .course-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+        .course-tag {
+            padding: 5px 12px; border-radius: 8px; font-size: 0.85rem;
+            background: rgba(161, 196, 253, 0.3); border: 1px solid rgba(161, 196, 253, 0.6);
+            color: #333;
+        }
+
+        /* 技能与荣誉网格布局 */
+        .info-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 15px;
+        }
+        .info-item h3 { font-size: 1rem; color: #444; margin-bottom: 10px; }
+        .info-item ul { list-style: none; padding: 0; }
+        .info-item li { line-height: 1.8; color: #555; font-size: 0.95rem; margin-bottom: 5px; padding-left: 15px; position: relative; }
+        .info-item li::before { content: '•'; position: absolute; left: 0; color: #a1c4fd; font-weight: bold; }
+
+        /* 项目展示网格 */
+        .portfolio-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px; margin-top: 15px;
+        }
+        .portfolio-item {
+            position: relative; aspect-ratio: 4/3; border-radius: 16px;
+            overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease; background: rgba(255,255,255,0.2);
+        }
+        .portfolio-item:hover { transform: translateY(-5px); }
+        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        
+        .item-caption {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: rgba(0,0,0,0.5); color: #fff; padding: 12px; font-size: 0.9rem;
+            backdrop-filter: blur(4px);
+        }
+        .item-caption span { display: block; font-size: 0.8rem; opacity: 0.8; margin-top: 4px; }
+
+        /* 联系按钮 */
+        .contact-btn {
+            display: inline-block; margin-top: 20px; padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50px; text-decoration: none; color: #333; font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .contact-btn:hover { background: rgba(255, 255, 255, 0.9); }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; gap: 20px; }
+        }
+        @media (max-width: 600px) {
+            .glass-card { padding: 30px; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="glass-card">
+        <h1>刘相婷 (Liu Xiangting)</h1>
+        <div class="subtitle">成都银杏酒店管理学院 · 2023届 · 文化产业管理</div>
+        
+        <!-- 个人标签 -->
+        <div class="tags">
+            <div class="tag">共青团员</div>
+            <div class="tag">大三在读</div>
+            <div class="tag">全国高校数字创意设计大赛参赛者</div>
+            <div class="tag">文化IP策划</div>
+        </div>
+
+        <!-- 个人介绍 -->
+        <div class="section-title">关于我</div>
+        <p>
+            你好，我是刘相婷，一名就读于成都银杏酒店管理学院文化产业管理专业的大三学生，也是一名共青团员。
+            我致力于探索“传统文化与现代数字媒介”的融合路径。在校期间，我不仅扎实掌握文化产业项目策划、新媒体运营等核心知识，还积极将理论付诸实践。
+            我曾代表学校参加“全国高校数字创意设计大赛”，负责核心视觉与交互策划；同时在校内文创工作室担任统筹，积累了丰富的项目管理与团队协作经验。我期待在未来的实习中，用创意与执行力为团队赋能！
+        </p>
+
+        <!-- 教育背景与核心课程 -->
+        <div class="section-title">教育背景</div>
+        <p><strong>成都银杏酒店管理学院</strong> | 文化产业管理 | 本科 | 2023届</p>
+        <div class="course-tags">
+            <div class="course-tag">文化产业项目管理</div>
+            <div class="course-tag">新媒体运营与策划</div>
+            <div class="course-tag">文化IP孵化与营销</div>
+            <div class="course-tag">文化市场数据分析</div>
+        </div>
+
+        <!-- 专业技能与荣誉奖项 -->
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>🛠️ 专业技能</h3>
+                <ul>
+                    <li>文化项目策划与统筹执行</li>
+                    <li>新媒体内容运营与数据分析</li>
+                    <li>熟练使用 PS / AI / PR 等设计剪辑软件</li>
+                    <li>精通 Office 办公套件与基础数据可视化</li>
+                </ul>
+            </div>
+            <div class="info-item">
+                <h3>🏆 荣誉奖项</h3>
+                <ul>
+                    <li>全国高校数字创意设计大赛（省级入围）</li>
+                    <li>校级优秀共青团员</li>
+                    <li>校级二等奖学金（连续两年）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 自我评价 -->
+        <div class="section-title">自我评价</div>
+        <p>
+            具备扎实的文化产业理论基础与出色的数字创意落地能力。拥有全国高校数字创意设计大赛实战经验，擅长将传统文化元素与现代视觉媒介相结合。具备优秀的跨部门沟通协调能力和项目统筹执行力，对文化IP孵化与新媒体传播有敏锐的洞察力，渴望在实战中持续成长。
+        </p>
+
+        <!-- 项目展示 -->
+        <div class="section-title">项目经历 / 作品展示</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/400/300?random=30" alt="作品">
+                <div class="item-caption">
+                    《蜀韵新声》非遗数字化IP
+                    <span>全国高校数字创意设计大赛 / 核心策划</span>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/400/300?random=31" alt="作品">
+                <div class="item-caption">
+                    银杏校园文创周边系列
+                    <span>校园文创工作室 / 项目统筹</span>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/400/300?random=32" alt="作品">
+                <div class="item-caption">
+                    校园文化艺术节视觉统筹
+                    <span>校学生会宣传部 / 视觉设计</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 联系方式 -->
+        <div class="section-title">与我联系</div>
+        <p>非常期待能获得宝贵的实习机会，或者与前辈们交流文化产业与数字创意的心得。欢迎随时联系我！</p>
+        <p>📧 邮箱: liuxiangting.culture2023@example.com</p>
+        <p>📱 微信: LiuXiangting_Creative</p>
+        <a href="mailto:liuxiangting.culture2023@example.com" class="contact-btn">发送邮件</a>
+    </div>
+
+</body>
+</html>
